@@ -14,7 +14,7 @@ const CountryTracks = () => {
   useEffect(() => {
     axios
       .get(
-        `https://geo.ipify.org/api/v2/country?apiKey=at_40IhJzyzfotAOdsyGmLE4VMR7r1rd&ipAddress=8.8.8.8`
+        `https://geo.ipify.org/api/v2/country?apiKey=${process.env.ipfytoken}=8.8.8.8`
       )
       .then((res) => setCountry(res?.data?.location.country))
       .catch((err) => console.log(err))
